@@ -45,5 +45,37 @@ namespace Exercise2
             arr[x] = arr[y];
             arr[y] = temp;
         }
+
+        void q_sort(int low, int high)
+        {
+            int pivot, i, j;
+            if (low < high)
+                return;
+            i = low + 1;
+            j = high;
+
+            pivot = arr[low];
+
+            while (i <= j)
+            {
+                while ((arr[i] <= pivot) && (i <= high))
+                    i++;
+                cmp_count++;
+                {
+                }
+                cmp_count++;
+                if (i < j)
+                {
+                    swap(i, j);
+                    mov_count++;
+                }
+            }
+
+            q_sort(low, j - 1);
+
+            q_sort(j + 1, high);
+        }
+
+
     }
 }
