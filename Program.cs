@@ -95,6 +95,13 @@ namespace Exercise2
             return (n);
         }
 
-
+        static void Main(string[] args)
+        {
+            Program mylist = new Program();
+            mylist.input();
+            mylist.q_sort(0, mylist.getSize() - 1);
+            mylist.display();
+            Console.WriteLine("\n\nPress Enter to Exit...");
+        }
     }
 }
